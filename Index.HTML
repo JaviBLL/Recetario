@@ -1,57 +1,63 @@
-<!doctype html>
-<html lang="es">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Calculador</title>
-    <link rel="stylesheet" href="Assets/Css/Style.Css">
-    <script src="Assets/Js/Script.js" defer></script>
-    <body>
-        <body>
-            <h1>Ingrese la cantidad de personas de la receta original</h1>
-            <form id="cantidadPersonas">
-                <label for="cantidad">Cantidad inicial de personas:</label>
-                <input type="number" required min="1" step="1" id="cantidad">
-            </form>
-            
-            <h2>Ingrese la cantidad de personas para realizar la receta</h2>
-            <form id="cantidadFinal">
-                <label for="cantFinal">Cantidad final de personas:</label>
-                <input type="number" required min="1" step="1" id="cantFinal">
-            </form>
-            
-            <form id="formularioIngrediente">
-                <h3>Ingredientes</h3>
-                <div id="listaIngrediente">
-                    <div class="ingrediente">
-                        <label for="ingresoIngrediente">Ingrediente:</label>
-                        <input type="text" id="ingresoIngrediente" placeholder="Ingrediente" required>
-                        <label for="cantidad">Cantidad:</label>
-                        <input type="number" id="cantidadIngrediente" placeholder="Cantidad" required min="0" step="0.01">
-                        <label for="unidad">Unidad:</label>
-                        <select name="unidad" id="unidad">
-                            <option value="Unidad">Unidad</option>
-                            <option value="kilos">Kilos</option>
-                            <option value="gramos">Gramos</option>
-                            <option value="miligramos">Miligramos</option>
-                            <option value="litros">Litros</option>
-                            <option value="mililitros">Mililitros</option>
-                        </select>
-                        <button type="button" onclick="quitarIngrediente(this)">-</button>
-                    </div>
-                </div>
-                <button type="button" onclick="agregarIngrediente()">+</button>
-            </form>
-            
-            <button type="button" onclick="calcularReceta()">Calcular Receta</button>
-        
-            <h2>Resultados</h2>
-            <div id="resultados">
-                <p>Aquí se mostrarán los resultados.</p>
-            </div>
-    </body>
+<!doctype html>  
+<html lang="es">  
+<head>  
+    <meta charset="utf-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1">  
+    <title>Calculador</title>  
+    <link rel="stylesheet" href="Assets/Css/Style.Css">  
+    <script src="Assets/Js/Script.js" defer></script>  
+</head>  
+<body>  
+    <h1>Ingrese la cantidad de personas de la receta original</h1>  
+    <form id="cantidadPersonas">  
+        <label for="cantidad">Ingrese la cantidad de personas de la receta original</label>  
+        <input type="number" required min="1" step="1" id="cantidad">  
+    </form>  
     
-</html>
+    <h2>Ingrese la cantidad de personas para realizar la receta</h2>  
+    <form id="cantidadFinal">  
+        <label for="cantFinal">Ingrese la cantidad de personas para realizar la receta</label>  
+        <input type="number" required min="1" step="1" id="cantFinal">  
+    </form>  
+
+    <form id="formularioPrecioVenta">  
+        <label for="precioVenta">Precio de venta por porción:</label>  
+        <input type="number" id="precioVenta" placeholder="Precio de venta" required min="0" step="0.01">  
+    </form>  
+
+    <form id="formularioIngrediente">  
+        <h3>Ingredientes</h3>  
+        <div id="listaIngrediente">  
+            <div class="ingrediente">  
+                <label for="ingresoIngrediente">Ingrediente:</label>  
+                <input type="text" id="ingresoIngrediente" placeholder="Ingrediente" required>  
+                <label for="cantidad">Cantidad:</label>  
+                <input type="number" id="cantidadIngrediente" placeholder="Cantidad" required min="0" step="0.01">  
+                <label for="unidad">Unidad:</label>  
+                <select name="unidad" id="unidad">  
+                    <option value="Unidad">Unidad</option>  
+                    <option value="kilos">Kilos</option>  
+                    <option value="gramos">Gramos</option>  
+                    <option value="miligramos">Miligramos</option>  
+                    <option value="litros">Litros</option>  
+                    <option value="mililitros">Mililitros</option>  
+                </select>  
+                <label for="precio">Precio:</label>  
+                <input type="number" id="precio" placeholder="Precio" required min="0" step="0.01">  
+                <button type="button" onclick="quitarIngrediente(this)">-</button>  
+            </div>  
+        </div>  
+        <button type="button" onclick="agregarIngrediente()">+</button>  
+    </form>  
+
+    <button type="button" onclick="calcularReceta()">Calcular Receta</button>  
+
+    <h2>Resultados</h2>  
+    <div id="resultados">  
+        <p>Aquí se mostrarán los resultados.</p>  
+    </div>  
+</body>  
+</html> 
 
 
 
